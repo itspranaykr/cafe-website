@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brunch Restaurant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 20px;
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            border-radius: 10px;
+        }
+
+        .logo {
+            font-size: 3.5em;
+            color: #ffd700;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .menu-section {
+            background: #1a1a1a;
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .section-title {
+            color: #ffd700;
+            font-size: 2em;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #ffd700;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 20px 0;
+            padding: 15px;
+            background: #2a2a2a;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateX(10px);
+            background: #333;
+        }
+
+        .item-details {
+            flex: 1;
+        }
+
+        .item-name {
+            font-size: 1.2em;
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        .item-description {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .item-price {
+            color: #ffd700;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-left: 20px;
+        }
+
+        .beverages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .beverage-category {
+            background: #2a2a2a;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .beverage-title {
+            color: #ffd700;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #ffd700;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .beverages {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">Brunch Cafe</div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="section-title">Breakfast</h2>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Classic Eggs Benedict</div>
+                    <div class="item-description">Poached eggs, Canadian bacon, hollandaise sauce on English muffins</div>
+                </div>
+                <div class="item-price">349rs</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">French Toast</div>
+                    <div class="item-description">Brioche bread, maple syrup, fresh berries, whipped cream</div>
+                </div>
+                <div class="item-price">349rs</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Avocado Toast</div>
+                    <div class="item-description">Smashed avocado, poached eggs, cherry tomatoes, microgreens</div>
+                </div>
+                <div class="item-price">399rs</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="section-title">Lunch</h2>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Grilled Salmon Salad</div>
+                    <div class="item-description">Fresh greens, grilled salmon, avocado, citrus vinaigrette</div>
+                </div>
+                <div class="item-price">699rs</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Chicken Club Sandwich</div>
+                    <div class="item-description">Grilled chicken, bacon, avocado, lettuce, tomato, aioli</div>
+                </div>
+                <div class="item-price">699rs</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Quinoa Buddha Bowl</div>
+                    <div class="item-description">Mixed grains, roasted vegetables, chickpeas, tahini dressing</div>
+                </div>
+                <div class="item-price">699rs</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="section-title">Dinner</h2>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Pan-Seared Steak</div>
+                    <div class="item-description">8oz ribeye, garlic mashed potatoes, seasonal vegetables</div>
+                </div>
+                <div class="item-price">899rs</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Grilled Sea Bass</div>
+                    <div class="item-description">Herb-crusted sea bass, risotto, lemon butter sauce</div>
+                </div>
+                <div class="item-price">999rs</div>
+            </div>
+            <div class="menu-item">
+                <div class="item-details">
+                    <div class="item-name">Mushroom Risotto</div>
+                    <div class="item-description">Arborio rice, wild mushrooms, parmesan, truffle oil</div>
+                </div>
+                <div class="item-price">799rs</div>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2 class="section-title">Beverages</h2>
+            <div class="beverages">
+                <div class="beverage-category">
+                    <h3 class="beverage-title">Coffee</h3>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <div class="item-name">Espresso</div>
+                        </div>
+                        <div class="item-price">349rs</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <div class="item-name">Cappuccino</div>
+                        </div>
+                        <div class="item-price">349rs</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <div class="item-name">Latte</div>
+                        </div>
+                        <div class="item-price">499rs</div>
+                    </div>
+                </div>
+
+                <div class="beverage-category">
+                    <h3 class="beverage-title">Tea</h3>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <div class="item-name">Indian tea</div>
+                        </div>
+                        <div class="item-price">99rs</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <div class="item-name">Green Tea</div>
+                        </div>
+                        <div class="item-price">60rs</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <div class="item-name">Chamomile</div>
+                        </div>
+                        <div class="item-price">60rs</div>
+                    </div>
+                </div>
+
+                <div class="beverage-category">
+                    <h3 class="beverage-title">Fresh Juices</h3>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <div class="item-name">Orange Juice</div>
+                        </div>
+                        <div class="item-price">300rs</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <div class="item-name">Green Detox</div>
+                        </div>
+                        <div class="item-price">350rs</div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-details">
+                            <div class="item-name">Berry Blast</div>
+                        </div>
+                        <div class="item-price">320rs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Hours: Monday - Sunday | 7:00 AM - 10:00 PM</p>
+            <p>All prices are subject to applicable taxes</p>
+        </div>
+    </div>
+</body>
+</html>
